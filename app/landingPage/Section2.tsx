@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 function Section2() {
   return (
     <div className="w-full min-h-[50vh] flex flex-col items-center">
-        <img src="/assets/decorationwhite2.png" className="w-[556px]"/>
+        <Image src="/assets/decorationwhite2.png" className="w-[556px]" width={556} height={60} alt="Décoration" />
         <h2 className="text-2xl -translate-y-24">
             Bienvenue chez Pizza House !
         </h2>
@@ -13,7 +15,7 @@ function Section2() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, fugit vel necessitatibus numquam blanditiis non debitis, similique perferendis quo modi ipsum unde cupiditate, nam deleniti! Vel, optio. Nam, similique doloribus.
         </p>
         <button className="text-xl mt-5 mb-4 border px-5 pt-1 pb-2 transition-all text-amber-300 hover:border-amber-500 hover:text-white">
-          Plus d'info
+          Plus d&apos;info
         </button>
     </div>
   )

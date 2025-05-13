@@ -18,8 +18,11 @@ function PizzaCreator() {
 
   const [isShowModal, setIsShowModal] = useState(false)
   const [order, setOrder] = useState<Pizza[]>(() => {
-    const savedOrder = localStorage.getItem("order");
-    return savedOrder ? JSON.parse(savedOrder) : [classicPizza];
+    if (typeof window !== 'undefined') {
+      const savedOrder = localStorage.getItem("order");
+      return savedOrder ? JSON.parse(savedOrder) : [classicPizza];
+    }
+    return [classicPizza];
   })
 
   const [selector, setSelector] = useState(0)
@@ -49,7 +52,9 @@ function PizzaCreator() {
 
 
   useEffect(() => {
-    localStorage.setItem("order", JSON.stringify(order));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("order", JSON.stringify(order));
+    }
   }, [order]);
 
   return (

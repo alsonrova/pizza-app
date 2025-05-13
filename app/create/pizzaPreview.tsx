@@ -11,18 +11,18 @@ function PizzaPreview({pizza}:Children) {
         
       </div>
       {
-        pizza.toppings.map((item,index)=>{
-          return <div className="absolute w-full h-full">
-                  <img src={`/assets/${item.image}`} className={`contain w-full h-full z-1`}/>
-                </div>
-        })
+        pizza.toppings.map((item) => (
+          <div className="absolute w-full h-full" key={item.name}>
+            <img src={`/assets/${item.image}`} className="contain w-full h-full z-1" alt={item.name} />
+          </div>
+        ))
       }
       <div className="absolute w-full h-full">
         {
          pizza.mainCheese.name === "Mozzarella" ? 
-            <img src={`/assets/mainMozzarella.svg`} className={`contain w-full h-full z-50 opacity-85`}/>
+            <img src={`/assets/mainMozzarella.svg`} className="contain w-full h-full z-50 opacity-85" alt="Mozzarella" />
             :  
-            <img src={`/assets/${pizza.mainCheese.image}`} className={`contain w-full h-full z-50 opacity-85`}/>
+            <img src={`/assets/${pizza.mainCheese.image}`} className="contain w-full h-full z-50 opacity-85" alt={pizza.mainCheese.name} />
   
         }
       </div>

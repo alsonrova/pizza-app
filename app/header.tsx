@@ -1,6 +1,5 @@
 "use client"
 
-import floraldecoration from '../public/assets/floraldecoration.png'
 import Logo from './components/logo'
 import Navigation from './navigation/navigation'
 import { useEffect,useState } from 'react'

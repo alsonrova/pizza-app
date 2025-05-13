@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Section1 from "./landingPage/Section1";
 import Section2 from "./landingPage/Section2";
 

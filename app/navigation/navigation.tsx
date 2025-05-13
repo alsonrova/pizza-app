@@ -1,6 +1,5 @@
 
 
-import { useState, useEffect } from 'react';
 import Navitem from "./navitem";
 
 function Navigation() {
