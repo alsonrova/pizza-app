@@ -1,10 +1,12 @@
 import Image from "next/image";
-import PageOne from "./PageOne";
+import Section1 from "./landingPage/Section1";
+import Section2 from "./landingPage/Section2";
 
 export default function Home() {
   return (
     <div>
-      <PageOne />
+      <Section1 />
+      <Section2 />
     </div>
   );
 }

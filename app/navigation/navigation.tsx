@@ -1,4 +1,6 @@
-import { FaAngleDown } from "react-icons/fa";
+
+
+import { useState, useEffect } from 'react';
 import Navitem from "./navitem";
 
 function Navigation() {

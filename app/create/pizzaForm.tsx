@@ -2,7 +2,7 @@ import { Ingrediant, Pizza,ingrediants } from "./pizza";
 
 interface Children {
   pizza : Pizza,
-  setter : Function,
+  setter : (order: Pizza[]) => void, 
   index : number,
   order : Pizza[]
 }
